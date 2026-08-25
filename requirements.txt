@@ -1,0 +1,10 @@
+# Versions used to train and evaluate the model reported in the paper
+# (CSC Roihu, NVIDIA GH200). Other recent versions are likely to work;
+# these are what the reported results were produced with.
+torch==2.10.0
+numpy==2.4.4
+nibabel==5.4.2
+pandas==2.3.3
+scikit-image==0.26.0
+PyYAML==6.0.3
+blobfile==3.2.0

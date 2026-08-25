@@ -1,0 +1,56 @@
+image_size: 64
+image_size_d: 120
+image_size_h: 144
+image_size_w: 120
+num_channels: 128
+num_res_blocks: 2
+channel_mult: 1,2,4,8
+attention_resolutions: '8'
+num_heads: 1
+class_cond: true
+cond_vec_dim: 6
+
+pairs_csv: /path/to/data/MRI_AllInterval_GMD_Pairs/pairs_tier1.csv
+scans_dir: /path/to/data/MRI_AllInterval_GMD_Pairs/scans
+eval_split: test
+eval_intervals: ""
+learn_sigma: false
+single_contrast: true
+dataset: gmd
+
+diffusion_steps: 1000
+timestep_respacing: 'list:999'
+noise_schedule: linear
+eta: 0.0
+clip_denoised: true
+predict_xstart: true
+rescale_timesteps: false
+rescale_learned_sigmas: false
+use_kl: false
+
+use_checkpoint: false
+use_scale_shift_norm: true
+resblock_updown: true
+use_new_attention_order: false
+use_fp16: false
+
+data_dir:  ""
+run_id: abl_predict_image_1step
+device: cluster
+
+resume: true
+continue_on_error: false
+num_workers: 0
+progress: false
+zero_outside_gm: true
+clip_target: false
+
+probability_map: false
+generation_number: 1
+max_samples: 0
+random_seed: 20
+
+predict_target: true
+tier1_csv: /path/to/data/MRI_AllInterval_GMD_Pairs/pairs_tier1.csv
+model_path: /path/to/checkpoints/ablation_predict_image.pt
+results_dir: /path/to/output

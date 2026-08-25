@@ -1,0 +1,73 @@
+
+data_dir: ""
+
+data_dir_val: "csv"
+val_interval: 5000
+dataset: "gmd"
+
+image_size: 64
+
+channel_mult: "1,2,4,8"
+
+single_contrast: true
+
+cond_vec_dim: 6
+
+pairs_csv: "/path/to/data/MRI_AllInterval_GMD_Pairs/pairs_tier1.csv"
+scans_dir: "/path/to/data/MRI_AllInterval_GMD_Pairs/scans"
+train_intervals: ""
+val_intervals: ""
+
+augment_flip: true
+
+num_channels: 128
+
+num_res_blocks: 2
+
+num_heads: 1
+
+class_cond: true
+
+learn_sigma: false
+
+use_scale_shift_norm: true
+
+resblock_updown: true
+
+attention_resolutions: "8"
+
+use_checkpoint: true
+
+diffusion_steps: 1000
+noise_schedule: "linear"
+rescale_learned_sigmas: false
+rescale_timesteps: false
+
+lr: !!float 1.4e-4
+batch_size: 2
+microbatch: -1
+
+use_fp16: true
+
+ema_rate: "0.9999"
+
+log_interval: 50
+save_interval: 1000
+
+lr_anneal_steps: 30001
+max_train_hours: 0.0
+
+results_dir: "/path/to/output/mse_only"
+
+resume_checkpoint: ""
+
+random_seed: 20
+device: "cluster"
+
+grad_clip: 1.0
+predict_xstart: true
+
+corr_weight: !!float 0.0
+schedule_sampler: uniform
+
+corr_min_t: 500
