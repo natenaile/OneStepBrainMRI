@@ -85,8 +85,7 @@ convolution algorithm selection are device-dependent.
 
 ![qualitative](assets/qualitative.png)
 
-True and predicted follow-up scans for one test subject across eight follow-up
-intervals, with the voxel-wise error below.
+Multi-horizon predictions for a 76-year-old test participant with mild cognitive impairment (MCI). Columns are follow-up intervals; rows are the ground-truth follow-up GMD map, the prediction, and the absolute error. Each panel shows an axial slice (MNI z = +12 mm) above sagittal (x = 0 mm) and coronal (y = −13.5 mm) views.
 
 ---
 
