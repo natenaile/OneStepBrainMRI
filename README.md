@@ -135,14 +135,7 @@ Computation on [CSC](https://csc.fi/) resources.
 ---
 
 ## Citing
-
-```bibtex
-@misc{shiferaw2026onestep,
-  title  = {TITLE},
-  author = {Shiferaw, Natenaile Asmamaw and Tohka, Jussi},
-  year   = {2026}
-}
-```
+we will provide soon.
 
 ---
 
