@@ -63,18 +63,7 @@ Multi-GPU via `torchrun`; `batch_size` in the config is **per GPU**.
 | `train_abl_no_covariates.yaml` | `zero_cond_slots: "0,1,2,3,4"` |
 | `train_abl_predict_image.yaml` | `predict_target: true` |
 
-Two notes on reproducing the reported numbers:
 
-- The reported checkpoint was trained in two stages: 15k steps at
-  `corr_weight` 0.3, then 15k at 0.1. `train_main.yaml` runs 30k steps at 0.1
-  from scratch, which we measured at Δ-Pearson 0.4731 against 0.4778 for the
-  two-stage model.
-- With `predict_target: true` the validation Δ-Pearson printed during training
-  is computed in image space and reads much higher (~0.8). It is not comparable
-  to the other runs; the change-space number comes from running inference and
-  evaluation afterwards.
-
----
 
 ## Inference
 
